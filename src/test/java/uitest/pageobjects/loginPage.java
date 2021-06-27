@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
 
 public class loginPage {
     private By BTN_SUBMIT = By.cssSelector("#submit");
@@ -48,12 +49,14 @@ public class loginPage {
     public loginPage loginToPage(String companyAlias, String username, String password) {
         this.wait.until(ExpectedConditions.visibilityOfElementLocated(this.TXTBOX_COMPANYALIAS)).sendKeys(companyAlias);
         this.wait.until(ExpectedConditions.visibilityOfElementLocated(this.TXTBOX_USERNAME)).sendKeys(username);
-        this.wait.until(ExpectedConditions.visibilityOfElementLocated(this.TXTBOX_PASSWORD)).sendKeys(password);        
+        this.wait.until(ExpectedConditions.visibilityOfElementLocated(this.TXTBOX_PASSWORD)).sendKeys(password);
         this.wait.until(ExpectedConditions.visibilityOfElementLocated(this.BTN_SUBMIT)).click();
-        
-                
-        
+
         return this;
-    }   
+    }
+
+    public void ValidateLoggedIn() {
+      Assert.assertTrue(this.getTitle() == "Login Page");
+    }
 
 }
