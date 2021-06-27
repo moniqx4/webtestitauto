@@ -1,0 +1,2 @@
+# webtestitauto
+ SenchaWebTestJavaProject
