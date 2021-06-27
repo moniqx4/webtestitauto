@@ -55,8 +55,8 @@ public class loginPage {
         return this;
     }
 
-    public void ValidateLoggedIn() {
-      Assert.assertTrue(this.getTitle() == "Login Page");
+    public void validateLoggedIn() {
+        Assert.assertTrue(this.getTitle() == "Login Page");
     }
 
 }

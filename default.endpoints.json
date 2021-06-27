@@ -1,3 +1,13 @@
 {
-  "endpoints": []
+  "endpoints": [
+    {
+      "active": true,
+      "capabilities": {},
+      "headless": false,
+      "id": "e868a23a-1e42-ea3d-6e64-5fb275e81570",
+      "name": "BaseLogin",
+      "type": "local",
+      "browserName": "chrome"
+    }
+  ]
 }
